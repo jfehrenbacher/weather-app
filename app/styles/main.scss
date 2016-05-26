@@ -13,7 +13,13 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 body {
   padding: 0;
 }
-
+.weather-forecast {
+  background-color:lightgrey;
+  width: 200px;
+  padding: 10px;
+  display: inline-block;
+  margin:10px;
+}
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,

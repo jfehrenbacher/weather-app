@@ -27,10 +27,16 @@ angular.module('weatherAppApp')
                 save = false;
             }
         }
-        if (save==true){
+        if (save===true){
             $localStorage.savedCities.push(cityData);
+            $scope.citySaved = {
+            	'success': true
+            };
         } else {
             console.log('city already saved');
+            $scope.citySaved = {
+            	'duplicate':true
+            };
         }
     }
 };

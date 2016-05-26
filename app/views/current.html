@@ -15,3 +15,12 @@
 <p><a ng-href="/#/forecast/{{cityID}}" class="btn btn-lg btn-primary">View 16-day Forecast</a></p>
 
 <p><button class="btn btn-sm btn-primary" ng-click="saveCity(currentWeather)">Save City</button></p>
+
+<div ng-messages="citySaved">
+    <p class="city-saved-alert bg-success text-success" ng-message="success">
+        {{currentWeather.name}} has been saved to your list of cities.
+    </p>
+    <p class="city-saved-alert bg-warning text-warning" ng-message="duplicate">
+        {{currentWeather.name}} has already been saved to your list of cities.
+    </p>
+</div>

@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-angular
+var myApp = angular
   .module('weatherAppApp', [
     'ngAnimate',
     'ngAria',
@@ -19,10 +19,18 @@ angular
     'ngSanitize',
     'ngStorage', // added to enable localStorage feature
     'ngTouch'
-  ])
-  .config(function ($routeProvider) {
+  ]);
+  myApp.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
+        templateUrl: 'views/login.html',
+        controller: 'RegistrationController'
+      })
+      .when('/register', {
+        templateUrl: 'views/register.html',
+        controller: 'RegistrationController'
+      })
+      .when('/main', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
@@ -46,3 +54,4 @@ angular
         redirectTo: '/'
       });
   });
+

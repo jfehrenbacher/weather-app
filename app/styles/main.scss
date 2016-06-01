@@ -5,6 +5,17 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 @import "transitions";
 
+// ng form input
+input.ng-invalid.ng-touched {
+  border: 1px solid #DA3637;
+}
+input.ng-valid.ng-touched {
+  border:1px solid #509D12;
+}
+.ng-invalid .btn {
+  background: gray;
+}
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;

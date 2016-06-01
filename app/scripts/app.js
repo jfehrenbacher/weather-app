@@ -10,6 +10,7 @@
  */
 var myApp = angular
   .module('weatherAppApp', [
+    'firebase',
     'ngAnimate',
     'ngAria',
     'ngCookies',
@@ -19,7 +20,9 @@ var myApp = angular
     'ngSanitize',
     'ngStorage', // added to enable localStorage feature
     'ngTouch'
-  ]);
+  ])
+  .constant('FIREBASE_URL', 'https://weatherappangreg.firebaseio.com/');
+
   myApp.config(function ($routeProvider) {
     $routeProvider
       .when('/', {

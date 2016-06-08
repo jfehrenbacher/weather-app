@@ -4,31 +4,31 @@
 		novalidate>
 
 		<div class="textintro">
-			<h1>Hi there!</h1>
-			<p>Log-in to access weather stuff</p>
-			<p class="message" ng-show="message">{{ user }}</p>
+			<h1 class="loginHello">Hi there!</h1>
+			<p class="loginSub">Log-in to access weather stuff</p>
+			<p class="message" ng-show="message">{{ message }}</p>
 		</div>
 
 		<fieldset>
-			<input type="email" name="email" placeholder="Email"
+			<input class="logemail loginput" type="email" name="email" placeholder="Email"
 			 ng-model="user.email" ng-required="true">
-			 <p class="error validationerror"
+			 <p class="emailerrorlogin validationerror"
 			 ng-show="myform.email.$invalid && myform.
 			 email.$touched">
 			 Must be a valid email</p>
 			
 
-			<input type="password" name="password" placeholder="Password"
+			<input class="logpw loginput"type="password" name="password" placeholder="Password"
 			 ng-model="user.password" ng-required="true">
-			  <p class="error validationerror"
+			  <p class="pwerrorlogin validationerror"
 			 ng-show="myform.password.$invalid && myform.
 			 password.$touched">
 			 Password is required</p>
 
 		</fieldset>
 
-		<button type="submit" class="btn"
+		<button type="submit" class="btn logbtn"
 		ng-disabled="myform.$invalid">Login</button>
-		<p>or<a href="#/register">Register</a><p>
+		<p class="orregister"><a href="#/register">Register</a><p>
 	</form>
 </section>

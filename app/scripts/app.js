@@ -23,6 +23,17 @@ var myApp = angular
   ])
   .constant('FIREBASE_URL', 'https://weatherappangreg.firebaseio.com/');
 
+  myApp.run(['$rootScope', '$location',
+    function($rootScope, $location) {
+      $rootScope.$on('$routeChangeError', 
+        function(event, next, previous, error) {
+          if(error='AUTH_REQUIRED') {
+            $rootScope.message = 'Sorry, you must log in to access that page';
+            $location.path('/login');
+          }//AUTH REQUIRED
+        });//event info
+    }]);//run
+
   myApp.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
@@ -36,7 +47,12 @@ var myApp = angular
       .when('/main', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
-        controllerAs: 'main'
+        controllerAs: 'main',
+        resolve: {
+          currentAuth: function(Authentication) {
+            return Authentication.requireAuth();
+          }//current Auth
+        }//resolve
       })
       .when('/about', {
         templateUrl: 'views/about.html',
@@ -52,6 +68,11 @@ var myApp = angular
         templateUrl: 'views/forecast.html',
         controller: 'ForecastCtrl',
         controllerAs: 'forecast'
+      })
+      .when('/contact', {
+        templateUrl: 'views/contact.html',
+        controller: 'ContactCtrl',
+        controllerAs: 'contact'
       })
       .otherwise({
         redirectTo: '/'

@@ -5,17 +5,367 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 @import "transitions";
 
-// ng form input
-input.ng-invalid.ng-touched {
-  border: 1px solid #DA3637;
-}
-input.ng-valid.ng-touched {
-  border:1px solid #509D12;
-}
-.ng-invalid .btn {
-  background: gray;
+// Basic styling
+
+html { 
+  background: url(/images/rainier.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
+body.ng-scope {
+  position:relative;
+  left:100px;
+  width:500px;
+  height:500px;
+  background-color:rgba(233, 156, 201, 0);
+}
+
+// Nav
+
+.navbar-default {
+  background-color:rgba(255,255,255,0);
+  border-color:rgba(0,0,0,0);
+  position:relative;
+}
+.navbar-nav {
+  margin:0;
+  position:absolute;
+  top:10px;
+  left:100px;
+}
+.navbar-default .navbar-nav > li > a {
+  color:white;
+  font-family:Raleway;
+  font-weight:bolder;
+  font-size:16px;
+  position:relative;
+  top:10px;
+}
+.navbar-default .navbar-toggle {
+  border-color: white;
+  position:relative;
+  top:20px;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color:rgba(112,122,197,1);
+}
+.navbar-toggle {
+  background-color:white;
+}
+.navbar-default .navbar-nav > .active > a {
+  background-color:transparent;
+  color:rgba(112,122,197,1);
+}
+.hiJack {
+  color:rgba(112,122,197,1);
+  font-family: Raleway;
+  font-weight:bold;
+  position:absolute;
+  font-size:20px;
+  top:30px;
+  left:0px;
+}
+.logout {
+  color:white;
+  text-transform:uppercase;
+  font-size:10px;
+  font-family:roboto;
+  position:absolute;
+  top:60px;
+}
+// Main (Select Your City page)
+
+.select {
+  color: white;
+  font-family:Raleway;
+  font-weight:bold;
+}
+.locationlabel {
+  color:white;
+  font-family:Raleway;
+  position:absolute;
+  left:17px;
+}
+.btnFind {
+  color:white;
+  background-color:rgba(233, 156, 201, 0.6);
+  position:absolute;
+  border:white;
+  top:277px;
+  left:367px;
+}
+.searchResult {
+  position:absolute;
+  top:340px;
+  left:32px;
+  font-family:Raleway;
+  color:white;
+}
+.viewWeather {
+  position:relative;
+  top:25px;
+  background-color:rgba(233, 156, 201, 0.6);
+  border:white;
+}
+// Login & Reg
+
+.regfield {
+  position:absolute;
+  top:20px;
+}
+
+.loginHello {
+  color:white;
+  font-family: Raleway;
+  position:absolute;
+  top:110px;
+}
+.loginSub {
+  color:white;
+  font-family: Raleway;
+  position:absolute;
+  top:170px;
+}
+.regtextintro p {
+  color:white;
+  font-family: Raleway;
+  position:absolute;
+  top:175px;
+}
+input {
+  background-color:rgba(233,156,201,0.4);
+  font-family: Raleway;
+  padding:4px;
+  border:none;
+}
+
+::-webkit-input-placeholder {
+   color: rgba(255,255,255,0.5);
+   font-family: Roboto;
+   padding-left:2px;
+}
+
+.firstnameerror {
+  color: white;
+  position:absolute;
+  left:210px;
+  text-transform:uppercase;
+  top:190px;
+  width:250px;
+}
+.lastnameerror{
+  color: white;
+  position:absolute;
+  left:210px;
+  text-transform:uppercase;
+  top:230px;
+  width:250px;
+}
+.emailerror{
+  color: white;
+  position:absolute;
+  left:210px;
+  text-transform:uppercase;
+  top:270px;
+  width:500px;
+}
+.emailerrorlogin{
+  color: white;
+  position:absolute;
+  left:210px;
+  text-transform:uppercase;
+  top:205px;
+}
+.pwerror {
+  color: white;
+  position:absolute;
+  left:210px;
+  text-transform:uppercase;
+  top:310px;
+  width:500px;
+}
+.pwerrorlogin {
+  color: white;
+  position:absolute;
+  left:210px;
+  text-transform:uppercase;
+  top:245px;
+}
+
+.registerintro {
+  color:white;
+  font-family: Raleway;
+  position:absolute;
+  top:110px;
+}
+.regfirstname {
+  color:white;
+  position:absolute;
+  top:185px;
+}
+.reglastname {
+  position:absolute;
+  top:225px;
+  color:white;
+}
+.regemail {
+  position:absolute;
+  top:265px;
+  color:white;
+}
+.regpassword {
+  position:absolute;
+  top:305px;
+  left:0px;
+  color:white;
+}
+.regbtn {
+  position:absolute;
+  top:370px;
+  background: rgba(233,156,201,0.6);
+  color:white;
+  font-family: Raleway;
+}
+.reginput {
+  width:200px;
+}
+.ng-invalid .regbtn .logbtn {
+  background:rgba(233,156,201,0.4);
+  color: rgba(255,255,255,0.5)
+}
+
+.orlogin a{
+  position:absolute;
+  top:412px;
+  left:5px;
+  color:white;
+  font-size:12px;
+  font-family:Raleway;
+}
+.loginput {
+  width:200px;
+}
+.logemail{
+  position:absolute;
+  top:200px;
+  left:0px;
+}
+.logpw{
+  position:absolute;
+  top:240px;
+  left:0px;
+}
+.logbtn {
+  position:absolute;
+  top:280px;
+  background: rgba(233,156,201,0.6);
+  color:white;
+  font-family: Raleway;
+}
+.orregister a{
+  position:absolute;
+  top:320px;
+  left:7px;
+  color:white;
+  font-size:12px;
+  font-family: Raleway;
+}
+.orregister a {
+  color:white;
+}
+.specified {
+  position:absolute;
+  top:310px;
+  left:210px;
+  text-transform:uppercase;
+  width:500px;
+}
+/* body {
+  background-image: url("/images/rainier.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height
+} */
+ 
+ // Current Weather 
+
+h1, .h1 {
+  font-size:36px;
+  color:white;
+  font-family:raleway;
+}
+dt {
+  font-family:roboto;
+  color:rgba(112,122,197,1);
+  text-transform:uppercase;
+}
+dd{
+  font-family:roboto;
+  color:white;
+}
+.btn-primary {
+  color:white;
+  background-color:rgba(112,122,197,1);
+  font-family:raleway;
+  border-color:transparent;
+}
+//
+// Forecast
+
+dl.weather-forecast.ng-scope {
+  background-color:rgba(255,255,255,.5);
+  margin:20px;
+}
+.currentButton {
+  position: relative;
+  left: 120px;
+  top: 50px;
+  margin-bottom:50px;
+}
+
+ //
+ // About
+
+.about {
+  font-family: Raleway;
+  color:rgba(112,122,197,1);
+  font-size:16px;
+}
+
+//
+// Contact
+
+.contact {
+  color:rgba(112,122,197,1);
+  font-family: Raleway;
+  font-size:16px;
+
+}
+
+//
+
+.jumbotron {
+  background-color:rgba(0,0,0,0)
+}
+
+
+// ng form input
+input.ng-valid.ng-touched {
+  border: 1px solid white;
+}
+input.ng-invalid.ng-touched {
+  border:1px solid rgba(233,156,201,0.4);
+}
+//
+/* Change the white to any color ;) */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px rgba(212,187,221, 1) inset;
+}
+//
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -33,6 +383,7 @@ body {
   display: inline-block;
   margin:10px;
 }
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -43,8 +394,10 @@ body {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid rgba(255,255,255,0);
   margin-bottom: 10px;
+
+}
 
   /* Make the masthead heading the same height as the navigation */
   h3 {
@@ -52,7 +405,6 @@ body {
     margin-bottom: 0;
     line-height: 40px;
     padding-bottom: 19px;
-  }
 }
 
 /* Custom page footer */
@@ -71,9 +423,13 @@ body {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
 
+  h1 {
+    color:white;
+  }
+
   .btn {
-    font-size: 21px;
-    padding: 14px 24px;
+    font-size: 16px;
+    padding: 8px 10px;
   }
 }
 

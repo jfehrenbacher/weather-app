@@ -3,8 +3,13 @@ myApp.controller('RegistrationController',
 	function($scope, Authentication) {
 
 	$scope.login = function() {
-		Authentication.login($scope.user)
+		Authentication.login($scope.user);
 	}; // login
+
+
+	$scope.logout = function() {
+		Authentication.logout();
+	}; // logout
 
 
 	$scope.register = function() {

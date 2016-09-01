@@ -93,13 +93,11 @@ body.ng-scope {
   color:white;
   background-color:rgba(233, 156, 201, 0.6);
   position:absolute;
-  border:white;
-  top:277px;
   left:367px;
 }
 .searchResult {
   position:absolute;
-  top:340px;
+  top:357px;
   left:32px;
   font-family:Raleway;
   color:white;
@@ -349,9 +347,12 @@ dl.weather-forecast.ng-scope {
 //
 
 .jumbotron {
-  background-color:rgba(0,0,0,0)
+  background-color:rgba(0,0,0,0);
 }
 
+.jumbotron .btn {
+  margin-bottom:30px;
+}
 
 // ng form input
 input.ng-valid.ng-touched {
@@ -463,4 +464,133 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+#savedCities {
+  list-style-type: none;
+  position:relative;
+  left:68px;
+  bottom:-48px;
+}
+
+#savetext {
+  font-size:10px;
+  background-color: rgba(233,156,201,0.4);
+}
+.bg-success {
+  background-color:transparent
+}
+.text-success {
+  color:white;
+  position:relative;
+  bottom:143px;
+  left:5px;
+  font-family:raleway;
+}
+.bg-warning {
+  background-color:transparent;
+}
+.text-warning {
+  color:white;
+  position:relative;
+  bottom:143px;
+  left:5px;
+  font-family:raleway;
+}
+li {
+  float:left;
+}
+.savedButtons{
+  margin-right:10px;
+
+}
+.maindl {
+  margin-top: 0;
+  margin-bottom: 20px;
+  background-color: rgba(255,255,255,0.6);
+  width: 200px;
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+  left: 105px;
+}
+.maindt {
+  font-family:Raleway;
+  color:#707ac5;
+  text-transform: uppercase;
+  border-radius: 7px;
+  padding-bottom:10px;
+  padding-top:10px;
+}
+.maindd {
+  font-family: Roboto;
+  color: #707ac5;
+}
+#currentTitle {
+  position:relative;
+  left:-7px;
+  font-family: raleway;
+  font-size:48px;
+  bottom:83px;
+  color:white;
+}
+#currentContainer {
+  background-color: rgba(255,255,255,0.6);
+  border-radius:30px;
+  width:175px;
+  height:175px;
+  position:relative;
+  right:167px;
+  bottom:-104px;
+}
+#currentTable {
+  background-color: rgba(255,255,255,0.6);
+  border-radius:30px;
+  position:relative;
+  left:191px;
+  bottom:68px;
+  padding:20px;
+}
+.currentLabel {
+  font-family: Montserrat;
+  color: #707ac5;
+  text-transform: uppercase;
+  border-bottom: 1px dotted #707ac5;
+  border-top: 1px dotted #707ac5;
+}
+.currentData {
+  color: #707ac5;
+  padding-top:5px;
+  padding-bottom: 5px;
+  font-family:Raleway;
+}
+#currentSave {
+  color: white;
+  background-color: #707ac5;
+  font-family: raleway;
+  border-color: transparent;
+  position: relative;
+  bottom: 150px;
+  left: 4px;
+  border-radius: 10px;
+  width: 160px;
+  height: 60px;
+  font-size: 16px;
+}
+#currentIcon {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  bottom: 45px;
+  left: 20px;
+}
+.btn-primary:hover {
+  color:white;
+  background-color: rgba(233,156,201,0.4);
+  border-color: transparent;
+}
+.btn-primary:active {
+  color:White;
+  background-color: #707ac5;
+  border-color: transparent;
 }

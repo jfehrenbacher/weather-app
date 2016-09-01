@@ -13,18 +13,18 @@
     </div>
     <div class="searchResult" ng-if="searchQuery">
       <p class="lead">{{citiesFound.count}} cities found matching the query: {{searchQuery}}.</p>
-      <dl ng-repeat="city in citiesFound.list">
-        <dt>{{city.name}}, {{city.sys.country}}</dt>
-        <dd>{{city.weather[0].main}} - {{city.weather[0].description}}</dd>
-        <dt>Temperature</dt>
-        <dd>{{city.main.temp}} &deg;F</dd>
+      <dl class="maindl" ng-repeat="city in citiesFound.list">
+        <dt class="maindt">{{city.name}}, {{city.sys.country}}</dt>
+        <dd class="maindd">{{city.weather[0].main}} - {{city.weather[0].description}}</dd>
+        <dt class="maindt">Temperature</dt>
+        <dd class="maindd">{{city.main.temp}} &deg;F</dd>
         <dd><a ng-href="#/current/{{city.id}}" class="btn btn-lg btn-primary viewWeather">View Weather</a></dd>
       </dl>
-              <div ng-if="storage.savedCities">
-  <h2>Saved Cities</h2>
-  <ul class="saved-cities-list">
-    <li ng-repeat="city in storage.savedCities">
-      <a ng-href="#/current/{{city.id}}" class="btn btn-lg btn-primary">{{city.name}}</a>
-    </div>
-  </p>
-</div>
+
+    </p>
+  </div>
+  <div id="savedCitiesContainer" ng-if="storage.savedCities">
+    <ul id="savedCities" class="saved-cities-list">
+      <li class="savedButtons" ng-repeat="city in storage.savedCities">
+        <a id="savetext" ng-href="#/current/{{city.id}}" class="btn btn-lg btn-primary">{{city.name}}</a>
+      </div>

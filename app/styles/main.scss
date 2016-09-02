@@ -333,15 +333,55 @@ dl.weather-forecast.ng-scope {
   color:rgba(112,122,197,1);
   font-size:16px;
 }
-
+#aboutTitle {
+  position:relative;
+  top:60px;
+  left:15px;
+}
+#aboutContainer {
+  background-color: rgba(255,255,255,0.6);
+  border-radius:20px;
+  padding: 20px;
+  position:relative;
+  top:70px;
+}
+#aboutText {
+  padding:20px;
+  color:#707ac5;
+  font-family:raleway;
+}
+.aboutP {
+  margin: 0px;
+}
+#topAbout {
+  padding-bottom:10px;
+}
 //
 // Contact
 
 .contact {
-  color:rgba(112,122,197,1);
+  color: white;
   font-family: Raleway;
-  font-size:16px;
-
+  font-size: 16px;
+  padding: 10px;
+  border-bottom: 1px dotted white;
+  border-top: 1px dotted white;
+}
+#contactContainer {
+  padding: 15px;
+      border-radius: 15px;
+      position: relative;
+      top: 50px;
+      right: 20px;
+}
+.contactLink {
+  color:#707ac5;
+  font-family:montserrat;
+}
+#contactTitle {
+  position: relative;
+  top: 60px;
+  font-family: raleway;
 }
 
 //
@@ -594,3 +634,4 @@ li {
   background-color: #707ac5;
   border-color: transparent;
 }
+

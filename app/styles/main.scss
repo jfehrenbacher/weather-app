@@ -35,6 +35,7 @@ body.ng-scope {
   position:absolute;
   top:10px;
   left:100px;
+  width:500px;
 }
 .navbar-default .navbar-nav > li > a {
   color:white;
@@ -339,16 +340,16 @@ dl.weather-forecast.ng-scope {
   left:15px;
 }
 #aboutContainer {
-  background-color: rgba(255,255,255,0.6);
   border-radius:20px;
-  padding: 20px;
   position:relative;
   top:70px;
 }
 #aboutText {
   padding:20px;
-  color:#707ac5;
+  color:white;
   font-family:raleway;
+  border-top:1px dotted white;
+  border-bottom:1px dotted white;
 }
 .aboutP {
   margin: 0px;
@@ -573,6 +574,7 @@ li {
   font-size:48px;
   bottom:83px;
   color:white;
+  width:1000px;
 }
 #currentContainer {
   background-color: rgba(255,255,255,0.6);
@@ -634,4 +636,13 @@ li {
   background-color: #707ac5;
   border-color: transparent;
 }
-
+.invalidmessage {
+      position: relative;
+    top: 100px;
+    color: White;
+    left: 220px;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #707ac5;
+    background-color: transparent;
+}
